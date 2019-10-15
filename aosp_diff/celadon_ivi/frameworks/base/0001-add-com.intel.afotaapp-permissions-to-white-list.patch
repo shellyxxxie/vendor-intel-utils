@@ -1,0 +1,31 @@
+From 538fe1f0d21a444e4e72f410286d441e12554bdd Mon Sep 17 00:00:00 2001
+From: shellyxx <shellyx.xie@intel.com>
+Date: Tue, 15 Oct 2019 14:56:30 +0800
+Subject: [PATCH] add com.intel.afotaapp permissions to white list.
+
+Change-Id: I7de5c399a668be183868e6fae5a701128d9be62a
+Tracked-On:
+---
+ data/etc/privapp-permissions-platform.xml | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/data/etc/privapp-permissions-platform.xml b/data/etc/privapp-permissions-platform.xml
+index ff4e1005c9d..32b0acde854 100644
+--- a/data/etc/privapp-permissions-platform.xml
++++ b/data/etc/privapp-permissions-platform.xml
+@@ -347,4 +347,13 @@ applications that come with the platform
+         <permission name="android.permission.MANAGE_DYNAMIC_SYSTEM"/>
+     </privapp-permissions>
+ 
++    <privapp-permissions package="com.intel.afotaapp">
++        <permission name="android.permission.CHANGE_CONFIGURATION"/>
++        <permission name="android.permission.REBOOT"/>
++        <permission name="android.permission.WRITE_MEDIA_STORAGE"/>
++        <permission name="android.permission.DELETE_CACHE_FILES"/>
++        <permission name="android.permission.RECOVERY"/>
++        <permission name="android.permission.ACCESS_CACHE_FILESYSTEM"/>
++    </privapp-permissions>
++
+ </permissions>
+-- 
+2.17.1
